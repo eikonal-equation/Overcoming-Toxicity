@@ -33,7 +33,7 @@ MW and AV acknowledge support by the National Science Foundation (awards DMS-164
     * Python (>=3.x) with the necessary packages listed in requirements.txt or in each notebook.
     * Jupyter Notebook or JupyterLab.
       
-* The C++ code requires the users to install the "[Boost](https://www.boost.org/)" library (external) and "[Eigen]([https://www.boost.org/](https://eigen.tuxfamily.org/))" library (external). 
+* The C++ code requires the users to install the "[Boost](https://www.boost.org/)" library (external) and "[Eigen](https://eigen.tuxfamily.org/)" library (external). 
     * We install it directly under the directory `Software_Code_for_Numerical_Experiments/Solver_Cpp_code/lib`. Please feel free to install it anywhere you want on your end but you would have to modify its path in the ***Makefile*** described below.
 
 ## Running the C++ Code: ##
