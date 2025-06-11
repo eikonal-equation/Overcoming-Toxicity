@@ -1,6 +1,11 @@
 function Generate_separatrix_Fig3()
 % This function generates the separatrix for the model in Fig. 3 of the paper
-
+% The separatrix is computed for different basal death rates of the killer and sensitive populations.
+%
+% Author: MingYi Wang, Cornell University
+% Last Modified: 06/2025
+%
+clear; clc;
 %% separatrix
 death_arr = [0.05,0.215,0.3,0.43,0.5];
 

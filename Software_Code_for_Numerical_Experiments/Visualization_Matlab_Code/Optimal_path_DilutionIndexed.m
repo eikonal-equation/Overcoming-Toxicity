@@ -26,7 +26,7 @@ function [xlist_full,ylist_full,policy_list,xstart, ystart, xend, yend] ...
 % Author: MingYi Wang, Cornell University
 % Last Modified: 06/2025
 %
-
+clear; clc;
 %% Initialization
 % Drift part of the population growth dynamics (Eq.[2] in the paper with "delta == 0")
 fx = @(x,y,a)  x.*(1-x).*((1-y).*(r_ks.*(1-epsilon.*a) - 1) + a.*gamma.*x.*y);

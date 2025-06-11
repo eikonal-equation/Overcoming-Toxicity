@@ -9,17 +9,18 @@ function Visualization_Fig3A()
 % Author: MingYi Wang, Cornell University
 % Last Modified: 06/2025
 %
+clear; clc;
 %% Parameters
 epsilon = 0.2; %The cost of constitutive toxin production
 gamma = 1.0; %The rescaled cost of toxin-production rate
 rks = 0.85; %The rescaled ratio of the growth rate of the killer to that of the sensitive
-d = 0.4308; % rescaled basal death rate (== -log(rho))
+d = 0.4308; % rescaled basal death rate (== -log(rho)/T)
 
-% Drift part of the population growth dynamics (Eq.[2] in the paper with "delta == 0")
+% Drift part of the population growth dynamics (Eq.[2] in the paper)
 fx = @(x,y,a)  x.*(1-x).*((1-y).*(rks.*(1-epsilon.*a) - 1) + a.*gamma.*x.*y);
 fy = @(x,y,a)  y.*(1-y).*(1 + (rks.*(1-epsilon.*a) - 1).*x) - a.*gamma.*y.^2.*x.*(1-x) - d.*y;
 
-%% plot on qp-plane
+%% Plot on fN-plane
 a=1; % Fix the toxin production rate to 1
 % Exact duplication of the initial conditions we used in the paper
 traj_1 = traj2(0.95,0.05,a,fx,fy,epsilon,gamma,rks);
@@ -181,7 +182,6 @@ function addingArrow(arrow_index1,x,y)
     % arrow_index1: index of the arrow
     % x: x-coordinates of the trajectory    
     % y: y-coordinates of the trajectory
-
 
     % Calculate the direction of the arrows
     dx1 = x(arrow_index1 + 1) - x(arrow_index1);

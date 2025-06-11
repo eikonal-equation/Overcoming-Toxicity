@@ -46,7 +46,7 @@ int main()
 	//=============================================Start of Our PDE Solver=====================================================
 	auto start = chrono::high_resolution_clock::now();
 
-	const double gLamb = 1.0; //Global arrival rate of the killer cells (lamb = 1.0 means that the arrival rate is equal to the inverse growth rate of the sensitive cells)
+	const double gLamb = 1.0; //Global arrival rate of the dilution (lamb = 1.0 means that the arrival rate is equal to the inverse growth rate of the sensitive cells)
 	cout << "Running the tactically-optimal killer solver (random dilutions): " << endl;
 	//Build the main class of our PDE solver
 	PDE_Solver myExample(gRefinement_factor, gMax_population, gMax_frequency, gTol, gEpsilon, gRks, gGamma, gLamb);
@@ -55,7 +55,7 @@ int main()
 	myExample.Main_VPI_Solver();
 
 	// Writing Grid Parameters to file
-	myExample.writeDomainToFile("Sto_tactic_opt_lamb_" + to_string(gLamb));
+	myExample.writeDomainToFile("Sto_tactic_opt");
 	cout << "Successfully completed!" << endl;
 	
 	// For Fig.8 in the main text:
@@ -73,7 +73,7 @@ int main()
 	// 	myExample.Main_VPI_Solver();
 
 	// 	// Writing Grid Parameters to file
-	// 	myExample.writeDomainToFile("Sto_myopic_opt_lamb_" + to_string(gLamb));
+	// 	myExample.writeDomainToFile(("Sto_tactic_opt");
 	// 	cout << "Successfully completed!" << endl;
 	// }
 	

@@ -47,7 +47,7 @@ int main()
 	
 	//=============================================Start of Our PDE Solver=====================================================
 	auto start = chrono::high_resolution_clock::now();
-	const double gLamb = 1.0; // Global arrival rate of the killer cells (lamb = 1.0 means that the arrival rate is equal to the inverse growth rate of the sensitive cells)
+	const double gLamb = 1.0; // Global arrival rate of the dilution (lamb = 1.0 means that the arrival rate is equal to the inverse growth rate of the sensitive cells)
 	const double gRho = 0.65; // Global survival rate
 	cout << "Running the strategically-optimal killer solver (hyperbolic BC; random dilutions): " << endl;
 	//Build the main class of our PDE solver
@@ -57,7 +57,7 @@ int main()
 	myExample.Main_VPI_Solver();
 
 	// Writing Grid Parameters to file
-	myExample.writeDomainToFile("Sto_strategic_opt_hyperbolic_lamb_" + to_string(gLamb) + "_rho_" + to_string(gRho));
+	myExample.writeDomainToFile("Sto_strategic_opt_hyperbolic");
 	cout << "Successfully completed!" << endl;
 
 	// For Fig.8 in the main text:
@@ -78,7 +78,7 @@ int main()
 	// 			myExample.Main_VPI_Solver();
 
 	// 			// Writing Grid Parameters to file
-	// 			myExample.writeDomainToFile("Sto_strategic_opt_hyperbolic_lamb_" + to_string(gLamb) + "_rho_" + to_string(gRho));
+	// 			myExample.writeDomainToFile("Sto_strategic_opt_hyperbolic");
 	// 			cout << "Successfully completed!" << endl;
 
 	// 			auto end1 = chrono::high_resolution_clock::now();

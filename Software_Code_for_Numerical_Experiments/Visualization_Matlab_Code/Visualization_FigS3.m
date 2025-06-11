@@ -2,15 +2,14 @@ function Visualization_FigS3()
 % Visualization_FigS3.m
 % This function generates the Fig. S3 in the paper, which visualizes
 % the population dynamics of a system with constitutive toxin production
-% (Eq.[S2.1] in the SI.)
+% (Eq.[S2.1] in the SI Appendix.)
 % The visualization includes the direction field of the population dynamics
 % and the trajectories of the system under different initial conditions
 %
 % Author: MingYi Wang, Cornell University
 % Last Modified: 06/2025
 %
-
-clear; clc; close all;
+clear; clc;
 %%  parameters for delta == 0.2
 epsilon = 0.2; % The cost of constitutive toxin production
 gamma = 1.0; % The rescaled cost of toxin-production rate
@@ -18,7 +17,7 @@ rks = 0.85; % The rescaled ratio of the growth rate of the killer to that of the
 d1 = 0.2; % rescaled basal death rate of the killer
 d2 = 0.2; % rescaled basal death rate of the sensitive
 
-% Drift part of the population growth dynamics (Eq.[S2.1] in the SI)
+% Drift part of the population growth dynamics (Eq.[S2.1] in the SI Appendix)
 fk = @(nk,ns,a) rks.*(1-epsilon.*a).*nk.*(1-nk-ns) -d1*nk;
 fs = @(nk,ns,a) ns.*(1-nk-ns)-a.*gamma.*nk.*ns - d2*ns;
 % Fixed points of the system
@@ -147,7 +146,7 @@ set(gca,'visible','off');
 set(findall(gca,'type','text'),'visible','on');
 colormap("copper")
 
-%%  parameters 0
+%%  parameters for delta == 0
 epsilon = 0.2; % The cost of constitutive toxin production
 gamma = 1.0; % The rescaled cost of toxin-production rate
 rks = 0.85; % The rescaled ratio of the growth rate of the killer to that of the sensitive
@@ -271,7 +270,7 @@ set(findall(gca,'type','text'),'visible','on');
 colormap("copper")
 
 
-%%  parameters 0.0257
+%%  parameters for delta == 0.0257
 epsilon = 0.2; % The cost of constitutive toxin production
 gamma = 1.0; % The rescaled cost of toxin-production rate
 rks = 0.85; % The rescaled ratio of the growth rate of the killer to that of the sensitive
@@ -403,7 +402,7 @@ set(findall(gca,'type','text'),'visible','on');
 colormap("copper")
 
 
-%%  parameters 0.35
+%%  parameters for delta == 0.35
 epsilon = 0.2; % The cost of constitutive toxin production
 gamma = 1.0; % The rescaled cost of toxin-production rate
 rks = 0.85; % The rescaled ratio of the growth rate of the killer to that of the sensitive

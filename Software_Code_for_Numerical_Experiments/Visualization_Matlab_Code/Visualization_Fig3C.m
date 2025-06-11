@@ -9,6 +9,7 @@ function Visualization_Fig1C()
 % Author: MingYi Wang, Cornell University
 % Last Modified: 06/2025
 %
+clear; clc;
 %% Parameters
 epsilon = 0.2; %The cost of constitutive toxin production
 gamma = 1.0; %The rescaled cost of toxin-production rate

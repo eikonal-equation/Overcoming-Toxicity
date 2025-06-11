@@ -9,12 +9,13 @@ function Visualization_Fig3D()
 % Author: MingYi Wang, Cornell University
 % Last Modified: 06/2025
 %
+clear; clc;
 %% Parameters
 epsilon = 0.2; %The cost of constitutive toxin production
 gamma = 1.0; %The rescaled cost of toxin-production rate
 rks = 0.85; %The rescaled ratio of the growth rate of the killer to that of the sensitive
 rho = 0.65; % rescaled survival rate
-%% two paths together
+%% Two paths together
 % Compute the vector field
 N=20; % Number of grid points we intended to plot the vector field
 NN = 800; % Number of grid points we used to compute the vector field

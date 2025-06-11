@@ -59,7 +59,7 @@ public:
 		fEpsilon = aEpsilon; // Cost of constitutive toxin production
 		fRks = aRks; // Intrinsic cell division rates ratio between the killer and the sensitive
 		fGamma = aGamma; // Rescaled killing rate
-		fLamb = aLamb; // Arrival rate of the toxin at the next time step
+		fLamb = aLamb; // Arrival rate of the dilution at the next time step
 		fDelta = 0.7; // Percentage of reduction of error to enter the policy evaluation step
 
 		fMyValfn.resize(boost::extents[fNx + 1][fNy + 1]); // Storage of the value function for all (x,y) grid points
@@ -105,6 +105,7 @@ private:
 	double fEpsilon; // Cost of constitutive toxin production
 	double fRks; // Intrinsic cell division rates ratio between the killer and the sensitive
 	double fGamma; // Rescaled killing rate
+	double fLamb; // Arrival rate of the dilution at the next time step
 	double fRho; // Rescaled survival rate
 	double fDelta; // Percentage of reduction of error to enter the policy evaluation step
 	double fProb_not_arrival; // Probability of dilution not arriving at the next time step

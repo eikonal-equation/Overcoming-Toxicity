@@ -69,7 +69,7 @@ int main()
 
 			// Writing Grid Parameters to file
 			std::string file_label = std::to_string(gRefinement_factor);
-			myExample.writeDomainToFile("Perf_hyper_lamb_" + str1 + "_rho_" + std::to_string(int(gRho * 1000 + 1e-12)));
+			myExample.writeDomainToFile("Perf_hyper");
 
 			cout << "Successfully completed!" << endl;
 		}
