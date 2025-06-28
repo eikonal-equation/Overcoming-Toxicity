@@ -13,7 +13,7 @@ Antagonistic interactions are critical determinants of microbial community stabi
 
 
 # Manuscript
-The "Overcomingtoxicity: how non-antagonistic microbes manage to thrive in boom-and-bust environments" manuscript can be found [here](#)  
+Our PNAS-published paper on "Overcomingtoxicity: how non-antagonistic microbes manage to thrive in boom-and-bust environments" can be found [here](https://www.pnas.org/doi/10.1073/pnas.2424372122).  
 
 # Contributions & Acknowledgements
   * AG suggested the topic and the modeling approach, conducted the wetlab experiments, and contextualized.
